@@ -49,6 +49,11 @@ public class EnemyPoolManager : MonoBehaviour
         }
     }
 
+    public void RemoveEnemyFromPool(GameObject enemy)
+    {
+         activeEnemyPoolObjects.Remove(enemy);      
+    }
+
     public GameObject GetEnemyFromPool()
     {
         return idleEnemyPoolObjects.Dequeue();

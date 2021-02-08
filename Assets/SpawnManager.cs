@@ -31,6 +31,8 @@ public class SpawnManager : MonoBehaviour
             GameObject enemy = EnemyPoolManager.instance.GetEnemyFromPool();
             enemy.transform.position = spawnPoint.position;
             enemy.transform.rotation = Quaternion.identity;
+            
+            //enemy.gameObject.SetActive(true);
         }
         else
         {

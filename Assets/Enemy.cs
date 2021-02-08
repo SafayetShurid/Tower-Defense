@@ -6,10 +6,15 @@ using UnityEngine;
 public class Enemy : MonoBehaviour
 {
 
-    
-    public float speed =1;
-  
-   
+    [SerializeField]
+    private float speed;
+    [SerializeField]
+    public float health;
+    [SerializeField]
+    public int intPosition;
+
+
+
     [Header("Destination Variables")]
     private GameObject destinationPointParent;    
     private List<Transform> destinationPoints;
@@ -30,14 +35,19 @@ public class Enemy : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Move();        
+        Move();
+        
+        if(health<=0)
+        {
+            //Destroy(this.gameObject);
+            this.gameObject.transform.position = SpawnManager.instance.spawnPoint.position;
+            this.gameObject.SetActive(false);
+            EnemyPoolManager.instance.AddNewEnemyToPool(this.gameObject);
+            EnemyPoolManager.instance.RemoveEnemyFromPool(this.gameObject);
+
+        }
     }
 
-
-
-
-
-   
 
     private void Move()
     {

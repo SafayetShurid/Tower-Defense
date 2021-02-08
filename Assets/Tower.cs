@@ -7,34 +7,34 @@ public class Tower : MonoBehaviour
 {
 
     public List<GameObject> enmeyObjects;
-   
+
     public GameObject currentEnemyTarget;
 
     [Header("Tower Property")]
     [SerializeField]
     private float range;
     [SerializeField]
-    private float fireRate ;
+    private float fireRate;
     [SerializeField]
     private GameObject bulletPrefab;
     [SerializeField]
-    private int bulletPoolSize;
-    private Queue<GameObject> bulletPool;
-    private float fireCountDown = 1f; 
-    
+
+
+    private float fireCountDown = 1f;
+
 
 
     void Start()
     {
-        bulletPool = new Queue<GameObject>(bulletPoolSize);
-        //InvokeRepeating("FindEnemyObjects", 0.1f,2.1f);
-        //InvokeRepeating("GetClosestTarget", 0.1f, 2.2f);
+
+        InvokeRepeating("FindEnemyObjects", 0.1f, 2.1f);
+        InvokeRepeating("GetClosestTarget", 0.1f, 2.2f);
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(ReadyToShoot())
+        if (ReadyToShoot())
         {
             Shoot();
         }
@@ -42,25 +42,24 @@ public class Tower : MonoBehaviour
 
     private void Shoot()
     {
-       if(bulletPool.Count>0)
-        {
-            GameObject bullet = bulletPool.Dequeue();
-        }
-       else
+        if (currentEnemyTarget != null)
         {
             GameObject bullet = Instantiate(bulletPrefab, this.transform);
+            bullet.GetComponent<Bullet>().SetTarget(currentEnemyTarget.transform);          
+          
         }
+
     }
 
     private bool ReadyToShoot()
     {
         fireCountDown -= Time.deltaTime;
-       if(fireCountDown<=0f)
+        if (fireCountDown <= 0f)
         {
             fireCountDown = 1 / fireRate;
             return true;
         }
-       else
+        else
         {
             return false;
         }
@@ -68,7 +67,8 @@ public class Tower : MonoBehaviour
 
     private void FindEnemyObjects()
     {
-        enmeyObjects = EnemyPoolManager.instance.GetActiveEnemies();     
+        enmeyObjects = new List<GameObject>();
+        enmeyObjects = EnemyPoolManager.instance.GetActiveEnemies();
     }
 
     private void GetClosestTarget()
@@ -83,12 +83,16 @@ public class Tower : MonoBehaviour
             GameObject nearestEnemy = null;
             foreach (GameObject enemy in enmeyObjects)
             {
-                float distanceToEnemy = Vector3.Distance(transform.position, enemy.transform.position);
-                if (distanceToEnemy < shortestDistance)
+                if(enemy!=null)
                 {
-                    shortestDistance = distanceToEnemy;
-                    nearestEnemy = enemy;
+                    float distanceToEnemy = Vector3.Distance(transform.position, enemy.transform.position);
+                    if (distanceToEnemy < shortestDistance)
+                    {
+                        shortestDistance = distanceToEnemy;
+                        nearestEnemy = enemy;
+                    }
                 }
+               
             }
 
             if (nearestEnemy != null && shortestDistance <= range)
@@ -100,9 +104,9 @@ public class Tower : MonoBehaviour
                 nearestEnemy = null;
             }
         }
-        
+
     }
 
-    
+
 
 }
