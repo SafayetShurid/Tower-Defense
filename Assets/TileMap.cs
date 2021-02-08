@@ -24,23 +24,17 @@ namespace TowerDefense
 
         public void GenerateMap()
         {
-            if (row < 2 || column < 2)
+
+            for (int x = 0; x < row; x++)
             {
-                Debug.Log("Map value is not set properly");
-                return;
-            }
-            else
-            {
-                for (int x = 0; x < row; x++)
+                for (int y = 0; y < column; y++)
                 {
-                    for (int y = 0; y < column; y++)
-                    {
-                        GameObject go = Instantiate(tilePrefab, new Vector2(x, y), Quaternion.identity);
-                        go.transform.SetParent(this.transform);
-                        go.name = $"({x}, {y})";
-                    }
+                    GameObject go = Instantiate(tilePrefab, new Vector2(x, y), Quaternion.identity);
+                    go.transform.SetParent(this.transform);
+                    go.name = $"({x}, {y})";
                 }
             }
+
         }
     }
 

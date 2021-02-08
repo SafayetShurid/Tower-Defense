@@ -7,9 +7,12 @@ public class Bullet : MonoBehaviour
 {
     [SerializeField]
     private float speed;
+    [SerializeField]
+    private int bulletDamage;
     private Transform target;
     private Vector3 targetDirection;
     private float distancePerFrame;
+ 
 
     void Start()
     {
@@ -19,7 +22,7 @@ public class Bullet : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(target==null)
+        if(target==null || !target.gameObject.activeInHierarchy)
         {
             Destroy(gameObject);
             return;
@@ -75,6 +78,6 @@ public class Bullet : MonoBehaviour
 
     public void DealDamage()
     {
-        target.GetComponent<Enemy>().health -= 10;
+        target.GetComponent<Enemy>().TakeDamage(bulletDamage);
     }
 }

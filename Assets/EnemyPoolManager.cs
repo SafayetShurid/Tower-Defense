@@ -7,8 +7,8 @@ public class EnemyPoolManager : MonoBehaviour
 
     public int poolSize;
 
-    Queue<GameObject> idleEnemyPoolObjects;
-    List<GameObject> activeEnemyPoolObjects;
+   public  Queue<GameObject> idleEnemyPoolObjects;
+   public  List<GameObject> activeEnemyPoolObjects;
 
     public static EnemyPoolManager instance;
 
@@ -27,6 +27,7 @@ public class EnemyPoolManager : MonoBehaviour
 
     public bool CheckEnemyInPool()
     {
+        Debug.Log(idleEnemyPoolObjects.Count);
         if (idleEnemyPoolObjects.Count > 1)
         {
             return true;
@@ -37,15 +38,20 @@ public class EnemyPoolManager : MonoBehaviour
         }
     }
 
-    public void AddNewEnemyToPool(GameObject enemy)
+    public void AddNewEnemyToActivePool(GameObject enemy)
+    {      
+        activeEnemyPoolObjects.Add(enemy);        
+    }
+
+    public void AddNewEnemyToIdlePool(GameObject enemy)
     {
-        if (activeEnemyPoolObjects.Count > poolSize)
+        if (idleEnemyPoolObjects.Count > poolSize)
         {
             Debug.Log("Pool size exceeded. Please incease size");
         }
         else
         {
-            activeEnemyPoolObjects.Add(enemy);
+            idleEnemyPoolObjects.Enqueue(enemy);
         }
     }
 

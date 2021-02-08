@@ -30,16 +30,14 @@ public class SpawnManager : MonoBehaviour
         {
             GameObject enemy = EnemyPoolManager.instance.GetEnemyFromPool();
             enemy.transform.position = spawnPoint.position;
-            enemy.transform.rotation = Quaternion.identity;
-            
-            //enemy.gameObject.SetActive(true);
+            enemy.transform.rotation = Quaternion.identity;                     
+            enemy.gameObject.SetActive(true);
+            EnemyPoolManager.instance.AddNewEnemyToActivePool(enemy);
         }
         else
         {
             GameObject enemy = Instantiate(enemyPrefab, spawnPoint.position, Quaternion.identity);
-            EnemyPoolManager.instance.AddNewEnemyToPool(enemy);
-
-
+            EnemyPoolManager.instance.AddNewEnemyToActivePool(enemy);
         }
     }
 
@@ -52,6 +50,11 @@ public class SpawnManager : MonoBehaviour
             yield return new WaitForSeconds(minimumTimebetweenEnemies);
         }
        
+    }
+
+    public void DecreaseSpawnTime(float decreaseTime)
+    {
+        minimumTimebetweenWaves -= decreaseTime;
     }
 
  

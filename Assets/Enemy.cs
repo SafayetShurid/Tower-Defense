@@ -3,16 +3,22 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
 public class Enemy : MonoBehaviour
 {
 
     [SerializeField]
     private float speed;
     [SerializeField]
-    public float health;
+    public int health;
     [SerializeField]
     public int intPosition;
 
+    [Header("HealthBar Variables")]
+    [SerializeField]
+    private Sprite[] healthBarSprites;
+    [SerializeField]
+    private SpriteRenderer healthBar;
 
 
     [Header("Destination Variables")]
@@ -26,6 +32,12 @@ public class Enemy : MonoBehaviour
         SetDestinationPoints();
     }
 
+    private void OnEnable()
+    {
+        health = 100;
+        UpdateHealthUI();
+        targetIndex = 0;
+    }
 
     void Start()
     {
@@ -40,14 +52,20 @@ public class Enemy : MonoBehaviour
         if(health<=0)
         {
             //Destroy(this.gameObject);
-            this.gameObject.transform.position = SpawnManager.instance.spawnPoint.position;
-            this.gameObject.SetActive(false);
-            EnemyPoolManager.instance.AddNewEnemyToPool(this.gameObject);
+            GameManager.instance.ScoreUp();
+          
+            this.gameObject.transform.position = SpawnManager.instance.spawnPoint.position;           
+            EnemyPoolManager.instance.AddNewEnemyToIdlePool(this.gameObject);
             EnemyPoolManager.instance.RemoveEnemyFromPool(this.gameObject);
+            this.gameObject.SetActive(false);
 
         }
     }
 
+    private void UpdateHealthUI()
+    {
+        healthBar.sprite = healthBarSprites[health / 10];
+    }
 
     private void Move()
     {
@@ -64,6 +82,12 @@ public class Enemy : MonoBehaviour
             }
 
         }
+    }
+
+    public void TakeDamage(int damage)
+    {
+        health -= damage;
+        UpdateHealthUI();
     }
 
     #region Destination

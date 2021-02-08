@@ -9,6 +9,7 @@ public class Tower : MonoBehaviour
     public List<GameObject> enmeyObjects;
 
     public GameObject currentEnemyTarget;
+    public AudioSource bulletSound;
 
     [Header("Tower Property")]
     [SerializeField]
@@ -27,8 +28,8 @@ public class Tower : MonoBehaviour
     void Start()
     {
 
-        InvokeRepeating("FindEnemyObjects", 0.1f, 2.1f);
-        InvokeRepeating("GetClosestTarget", 0.1f, 2.2f);
+        InvokeRepeating("FindEnemyObjects", 0.1f, 1f);
+        InvokeRepeating("GetClosestTarget", 0.1f, 1f);
     }
 
     // Update is called once per frame
@@ -42,11 +43,13 @@ public class Tower : MonoBehaviour
 
     private void Shoot()
     {
-        if (currentEnemyTarget != null)
+        if (currentEnemyTarget != null && currentEnemyTarget.gameObject.activeInHierarchy)
         {
             GameObject bullet = Instantiate(bulletPrefab, this.transform);
-            bullet.GetComponent<Bullet>().SetTarget(currentEnemyTarget.transform);          
-          
+            bullet.GetComponent<Bullet>().SetTarget(currentEnemyTarget.transform);
+            bulletSound.Play();
+
+
         }
 
     }

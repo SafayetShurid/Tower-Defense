@@ -11,9 +11,9 @@ GameObject:
   - component: {fileID: 1023772461740384047}
   - component: {fileID: 7319452517295691613}
   - component: {fileID: 7813962681828461230}
-  - component: {fileID: -2187470026601523370}
+  - component: {fileID: -7000021654818635801}
   m_Layer: 0
-  m_Name: Tower
+  m_Name: Tower2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -74,7 +74,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: c0dc6cb8812fef94888b6bf88d3dc2b9, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 0.882353, b: 0.15686275, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -98,13 +98,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enmeyObjects: []
   currentEnemyTarget: {fileID: 0}
-  bulletSound: {fileID: -2187470026601523370}
-  range: 3
-  fireRate: 2
+  bulletSound: {fileID: -7000021654818635801}
+  range: 4
+  fireRate: 4
   bulletPrefab: {fileID: 5669196214266821438, guid: 2b533be02a761664aa7bf4079fec7874,
     type: 3}
   fireCountDown: 1
---- !u!82 &-2187470026601523370
+--- !u!82 &-7000021654818635801
 AudioSource:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
