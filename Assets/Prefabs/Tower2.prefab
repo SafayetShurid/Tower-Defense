@@ -101,9 +101,9 @@ MonoBehaviour:
   bulletSound: {fileID: -7000021654818635801}
   range: 4
   fireRate: 4
-  bulletPrefab: {fileID: 5669196214266821438, guid: 2b533be02a761664aa7bf4079fec7874,
+  bulletPrefab: {fileID: 5669196214266821438, guid: 59def54d57217194dbbd3b85e00f5bf9,
     type: 3}
-  fireCountDown: 1
+  towerPrice: 35
 --- !u!82 &-7000021654818635801
 AudioSource:
   m_ObjectHideFlags: 0

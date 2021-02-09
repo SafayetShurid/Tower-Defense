@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -14,12 +15,30 @@ public class UiManager : MonoBehaviour
     public Button normalTowerButton;
     public Button powerfulTowerButton;
 
+    public Text normalTowerCashText;
+    public Text powerfulTowerCashText;
+
+    public Text normalTowerBulletText;
+    public Text powerfulTowerBulletText;
+
     public bool normalTowerSelected;
     public bool powerfulTowerSelected;
 
     void Start()
     {
         instance = this;
+        SetTowerShopUI();
+    }
+
+    private void SetTowerShopUI()
+    {
+        GameObject nomralTower = BuilderManager.instance.GetTowerPrefab(BuilderManager.TowerType.normal);
+        normalTowerCashText.text = nomralTower.GetComponent<Tower>().GetTowerPrice().ToString() + "$";
+        normalTowerBulletText.text = nomralTower.GetComponent<Tower>().GetBulletPrefab().ToString()  + "$";
+
+        GameObject powerfulTower = BuilderManager.instance.GetTowerPrefab(BuilderManager.TowerType.powerful);
+        powerfulTowerCashText.text = powerfulTower.GetComponent<Tower>().GetTowerPrice().ToString() + "$";
+        powerfulTowerBulletText.text = powerfulTower.GetComponent<Tower>().GetBulletPrefab().ToString() + "$";
     }
 
     // Update is called once per frame

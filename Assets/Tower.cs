@@ -19,6 +19,9 @@ public class Tower : MonoBehaviour
     [SerializeField]
     private GameObject bulletPrefab;
     [SerializeField]
+    private int towerPrice;
+    
+    
 
 
     private float fireCountDown = 1f;
@@ -48,7 +51,6 @@ public class Tower : MonoBehaviour
             GameObject bullet = Instantiate(bulletPrefab, this.transform);
             bullet.GetComponent<Bullet>().SetTarget(currentEnemyTarget.transform);
             bulletSound.Play();
-
 
         }
 
@@ -108,6 +110,17 @@ public class Tower : MonoBehaviour
             }
         }
 
+    }
+
+
+    public int GetTowerPrice()
+    {
+        return towerPrice;
+    }
+
+    public GameObject GetBulletPrefab()
+    {
+        return bulletPrefab;
     }
 
 

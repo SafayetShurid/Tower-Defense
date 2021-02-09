@@ -9,6 +9,9 @@ public class BuilderManager : MonoBehaviour
 
     public static BuilderManager instance;
 
+
+    public enum TowerType { normal,powerful}
+
     void Start()
     {
         instance = this;
@@ -38,5 +41,18 @@ public class BuilderManager : MonoBehaviour
         towerObject.transform.position += new Vector3(0.5f, 0.5f,0f);
         UiManager.instance.normalTowerSelected = false;
         UiManager.instance.powerfulTowerSelected = false;
+    }
+
+    public GameObject GetTowerPrefab(TowerType towerType)
+    {
+        switch(towerType)
+        {
+            case TowerType.normal:
+                return normalTowerPrefab;                
+            case TowerType.powerful:
+                return powerfulTowerPrefab;
+            default:
+                return null;
+        }
     }
 }
