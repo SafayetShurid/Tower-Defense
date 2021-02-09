@@ -10,19 +10,16 @@ public class GameManager : MonoBehaviour
    
     public int gameScore = 0;
     public int cash = 0;
-
-    public float decreaseSpawnTime ;
-    public float waitTimeToIncreaseDifficulty ;
     public int cashAmountToAdd ;
-    public float waitTimeToIncreaseCash ;
+    public float cashIncreaseSecond ;
     public static GameManager instance;
 
     void Start()
     {
         // TileMap.instance.GenerateMap();
         instance = this;
-        StartCoroutine(IncreaseDifficulty(waitTimeToIncreaseDifficulty));
-        StartCoroutine(IncreaseCash(waitTimeToIncreaseCash));
+       
+        StartCoroutine(FixedCashIncrease());
 
     }
 
@@ -37,28 +34,25 @@ public class GameManager : MonoBehaviour
         gameScore++;
     }  
 
-    IEnumerator IncreaseDifficulty(float waitTime)
-    {
-        yield return new WaitForSeconds(1f);
-        while(true)
-        {
-            yield return new WaitForSeconds(waitTime);
-            SpawnManager.instance.DecreaseSpawnTime(decreaseSpawnTime);
-        }
-    }
-
-    IEnumerator IncreaseCash(float waitTime)
+    IEnumerator FixedCashIncrease()
     {
         yield return new WaitForSeconds(1f);
         while (true)
         {
-            yield return new WaitForSeconds(waitTime);
+            yield return new WaitForSeconds(cashIncreaseSecond);
             cash += cashAmountToAdd;
         }
+    }
+
+    public void IncreaseCash(int amount)
+    {
+        cash += amount;
     }
 
     public void DecreaseCash(int amount)
     {
         cash -= amount;
     }
+
+
 }

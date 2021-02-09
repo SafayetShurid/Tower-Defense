@@ -12,7 +12,7 @@ public class Enemy : MonoBehaviour
     [SerializeField]
     public int health;
     [SerializeField]
-    public int intPosition;
+    public int cashReward;
 
     [Header("HealthBar Variables")]
     [SerializeField]
@@ -53,7 +53,7 @@ public class Enemy : MonoBehaviour
         {
             //Destroy(this.gameObject);
             GameManager.instance.ScoreUp();
-          
+            GameManager.instance.IncreaseCash(cashReward);
             this.gameObject.transform.position = SpawnManager.instance.spawnPoint.position;           
             EnemyPoolManager.instance.AddNewEnemyToIdlePool(this.gameObject);
             EnemyPoolManager.instance.RemoveEnemyFromPool(this.gameObject);
@@ -64,7 +64,15 @@ public class Enemy : MonoBehaviour
 
     private void UpdateHealthUI()
     {
-        healthBar.sprite = healthBarSprites[health / 10];
+        if(health/10< 0 || health/10 >10)
+        {
+            return;
+        }
+        else
+        {
+            healthBar.sprite = healthBarSprites[health / 10];
+        }    
+        
     }
 
     private void Move()
@@ -82,6 +90,12 @@ public class Enemy : MonoBehaviour
             }
 
         }
+        else
+        {
+            Debug.Log("Game Over");
+            UiManager.instance.showGameOverText();
+            Time.timeScale = 0f;
+        }    
     }
 
     public void TakeDamage(int damage)

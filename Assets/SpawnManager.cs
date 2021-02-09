@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -8,20 +9,37 @@ public class SpawnManager : MonoBehaviour
     public static SpawnManager instance;
     public GameObject enemyPrefab;
     public float minimumTimebetweenEnemies;
-    public float minimumTimebetweenWaves;
+    
     public Transform spawnPoint;
+
+    [SerializeField]
+    private float decreaseRate;
+    [SerializeField]
+    private float waitTime;
+    private float initialWaitTime;
 
     void Start()
     {
+        initialWaitTime = waitTime;
         instance = this;
-        StartCoroutine(StartSpawning(minimumTimebetweenEnemies));
+        StartCoroutine(StartSpawning());
     }
 
     // Update is called once per frame
     void Update()
     {
-       
+        waitTime -= Time.deltaTime;
+       if(waitTime<=0)
+        {
+            IncreaseSpawnRate();
+            waitTime = initialWaitTime;
+        }
         
+    }
+
+    private void IncreaseSpawnRate()
+    {
+        minimumTimebetweenEnemies -= decreaseRate;
     }
 
     void SpawnEnemy()
@@ -41,7 +59,7 @@ public class SpawnManager : MonoBehaviour
         }
     }
 
-    IEnumerator StartSpawning(float minimumTimebetweenEnemies)
+    IEnumerator StartSpawning()
     {
         yield return new WaitForSeconds(1f);
         while(true)
@@ -52,10 +70,7 @@ public class SpawnManager : MonoBehaviour
        
     }
 
-    public void DecreaseSpawnTime(float decreaseTime)
-    {
-        minimumTimebetweenWaves -= decreaseTime;
-    }
+    
 
  
 }

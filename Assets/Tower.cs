@@ -20,8 +20,9 @@ public class Tower : MonoBehaviour
     private GameObject bulletPrefab;
     [SerializeField]
     private int towerPrice;
-    
-    
+
+  
+
 
 
     private float fireCountDown = 1f;
@@ -48,10 +49,13 @@ public class Tower : MonoBehaviour
     {
         if (currentEnemyTarget != null && currentEnemyTarget.gameObject.activeInHierarchy)
         {
-            GameObject bullet = Instantiate(bulletPrefab, this.transform);
-            bullet.GetComponent<Bullet>().SetTarget(currentEnemyTarget.transform);
-            bulletSound.Play();
-
+            if (Vector3.Distance(transform.position, currentEnemyTarget.transform.position)<=range)
+            {
+                GameObject bullet = Instantiate(bulletPrefab, this.transform);
+                bullet.GetComponent<Bullet>().SetTarget(currentEnemyTarget.transform);
+                bulletSound.Play();
+            }
+            
         }
 
     }

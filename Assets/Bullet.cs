@@ -80,4 +80,9 @@ public class Bullet : MonoBehaviour
     {
         target.GetComponent<Enemy>().TakeDamage(bulletDamage);
     }
+
+    public int GetBulletDamage()
+    {
+        return bulletDamage;
+    }    
 }

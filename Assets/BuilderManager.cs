@@ -29,12 +29,12 @@ public class BuilderManager : MonoBehaviour
         if (UiManager.instance.powerfulTowerSelected)
         {
             towerObject = Instantiate(powerfulTowerPrefab, tilePosition);
-            GameManager.instance.DecreaseCash(35);
+            GameManager.instance.DecreaseCash(powerfulTowerPrefab.GetComponent<Tower>().GetTowerPrice());
         }
         else
         {
             towerObject = Instantiate(normalTowerPrefab, tilePosition);
-            GameManager.instance.DecreaseCash(15);
+            GameManager.instance.DecreaseCash(normalTowerPrefab.GetComponent<Tower>().GetTowerPrice());
 
         }
        

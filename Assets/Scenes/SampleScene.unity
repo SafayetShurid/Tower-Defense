@@ -43,7 +43,7 @@ RenderSettings:
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
-  serializedVersion: 12
+  serializedVersion: 11
   m_GIWorkflowMode: 0
   m_GISettings:
     serializedVersion: 2
@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_LightingSettings: {fileID: 1817763852}
+  m_UseShadowmask: 1
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -118,8 +118,6 @@ NavMeshSettings:
     manualTileSize: 0
     tileSize: 256
     accuratePlacement: 0
-    maxJobWorkers: 0
-    preserveTilesOutsideBounds: 0
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
@@ -155,11 +153,9 @@ MonoBehaviour:
   tilePrefab: {fileID: 8181038115511262773, guid: e5ce5a9072e6c1748bdf301d28b20c68,
     type: 3}
   gameScore: 0
-  cash: 30
-  decreaseSpawnTime: 1
-  waitTimeToIncreaseDifficulty: 5
-  cashAmountToAdd: 3
-  waitTimeToIncreaseCash: 2
+  cash: 25
+  cashAmountToAdd: 2
+  cashIncreaseSecond: 2
 --- !u!4 &54783838
 Transform:
   m_ObjectHideFlags: 0
@@ -226,7 +222,6 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
   m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -310,7 +305,7 @@ GameObject:
   m_Component:
   - component: {fileID: 93860797}
   m_Layer: 0
-  m_Name: (13, 4)
+  m_Name: (11, 2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -324,7 +319,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 93860796}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 13, y: 4, z: 0}
+  m_LocalPosition: {x: 11, y: 2, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 881295568}
@@ -342,7 +337,7 @@ GameObject:
   - component: {fileID: 94016131}
   - component: {fileID: 94016130}
   m_Layer: 5
-  m_Name: PriceText (1)
+  m_Name: DamageText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -383,7 +378,6 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
   m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -522,7 +516,6 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
   m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -582,7 +575,6 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
   m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -713,8 +705,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1630181135}
-        m_TargetAssemblyTypeName: UiManager, Assembly-CSharp
-        m_MethodName: SelectNormalTower
+        m_MethodName: SelectPowerfulTower
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -739,7 +730,6 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 0.9824766, b: 0.3537736, a: 1}
   m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -814,7 +804,6 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
   m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -911,7 +900,7 @@ GameObject:
   m_Component:
   - component: {fileID: 261165360}
   m_Layer: 0
-  m_Name: (12, 3)
+  m_Name: (11, 0)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -925,7 +914,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 261165359}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 12, y: 3, z: 0}
+  m_LocalPosition: {x: 11, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 881295568}
@@ -960,36 +949,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 881295568}
   m_RootOrder: 30
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &362117912
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 362117913}
-  m_Layer: 0
-  m_Name: (14, 1)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &362117913
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 362117912}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 14, y: 1, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 881295568}
-  m_RootOrder: 40
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &390666165
 GameObject:
@@ -1044,7 +1003,6 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
   m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -1198,6 +1156,84 @@ Transform:
   m_Father: {fileID: 2755137794117471969}
   m_RootOrder: 89
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &469866057
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 469866058}
+  - component: {fileID: 469866060}
+  - component: {fileID: 469866059}
+  m_Layer: 5
+  m_Name: GameOverText
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!224 &469866058
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 469866057}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1544843457}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -50.8, y: 10}
+  m_SizeDelta: {x: 175.35391, y: 41.033653}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &469866059
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 469866057}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_RaycastTarget: 1
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FontData:
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 32
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 10
+    m_MaxSize: 112
+    m_Alignment: 0
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 1
+    m_VerticalOverflow: 1
+    m_LineSpacing: 1
+  m_Text: Game Over
+--- !u!222 &469866060
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 469866057}
+  m_CullTransparentMesh: 0
 --- !u!1 &511893354
 GameObject:
   m_ObjectHideFlags: 0
@@ -1251,7 +1287,6 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
   m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -1348,7 +1383,7 @@ GameObject:
   m_Component:
   - component: {fileID: 619892856}
   m_Layer: 0
-  m_Name: (13, 3)
+  m_Name: (11, 1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1362,41 +1397,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 619892855}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 13, y: 3, z: 0}
+  m_LocalPosition: {x: 11, y: 1, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 881295568}
   m_RootOrder: 35
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &633850771
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 633850772}
-  m_Layer: 0
-  m_Name: (12, 2)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &633850772
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 633850771}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 12, y: 2, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 881295568}
-  m_RootOrder: 37
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &669137411
 GameObject:
@@ -1450,7 +1455,6 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 0
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -1678,7 +1682,6 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
   m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -1787,7 +1790,6 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 0
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -1820,7 +1822,7 @@ GameObject:
   m_Component:
   - component: {fileID: 867547070}
   m_Layer: 0
-  m_Name: (13, 5)
+  m_Name: (11, 3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1834,7 +1836,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 867547069}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 13, y: 5, z: 0}
+  m_LocalPosition: {x: 11, y: 3, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 881295568}
@@ -1904,11 +1906,6 @@ Transform:
   - {fileID: 93860797}
   - {fileID: 619892856}
   - {fileID: 261165360}
-  - {fileID: 633850772}
-  - {fileID: 1648525965}
-  - {fileID: 1773875901}
-  - {fileID: 362117913}
-  - {fileID: 1536233419}
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2095,7 +2092,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1157923566}
   m_Layer: 0
-  m_Name: (12, 6)
+  m_Name: (11, 5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2109,7 +2106,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1157923565}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 12, y: 6, z: 0}
+  m_LocalPosition: {x: 11, y: 5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 881295568}
@@ -2362,7 +2359,6 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
   m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -2474,7 +2470,6 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1630181135}
-        m_TargetAssemblyTypeName: UiManager, Assembly-CSharp
         m_MethodName: SelectNormalTower
         m_Mode: 1
         m_Arguments:
@@ -2500,7 +2495,6 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -2575,7 +2569,6 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
   m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -2602,36 +2595,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1510034729}
   m_CullTransparentMesh: 0
---- !u!1 &1536233418
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1536233419}
-  m_Layer: 0
-  m_Name: (15, 1)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1536233419
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1536233418}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 15, y: 1, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 881295568}
-  m_RootOrder: 41
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1544843453
 GameObject:
   m_ObjectHideFlags: 0
@@ -2724,6 +2687,7 @@ RectTransform:
   m_Children:
   - {fileID: 1939521315}
   - {fileID: 1630181134}
+  - {fileID: 469866058}
   m_Father: {fileID: 0}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2834,7 +2798,7 @@ GameObject:
   - component: {fileID: 1626837554}
   - component: {fileID: 1626837553}
   m_Layer: 5
-  m_Name: PriceText (1)
+  m_Name: DamageText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2875,7 +2839,6 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
   m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -2953,43 +2916,14 @@ MonoBehaviour:
   scoreText: {fileID: 168359976}
   cashText: {fileID: 61690475}
   normalTowerButton: {fileID: 1446168315}
-  powerfulTowerButton: {fileID: 0}
-  normalTowerCashText: {fileID: 0}
-  powerfulTowerCashText: {fileID: 0}
-  normalTowerBulletText: {fileID: 0}
-  powerfulTowerBulletText: {fileID: 0}
+  powerfulTowerButton: {fileID: 171934468}
+  normalTowerCashText: {fileID: 1510034731}
+  powerfulTowerCashText: {fileID: 219509790}
+  normalTowerBulletText: {fileID: 1411436817}
+  powerfulTowerBulletText: {fileID: 124206891}
+  gameOverText: {fileID: 469866059}
   normalTowerSelected: 0
   powerfulTowerSelected: 0
---- !u!1 &1648525964
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1648525965}
-  m_Layer: 0
-  m_Name: (12, 1)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1648525965
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1648525964}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 12, y: 1, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 881295568}
-  m_RootOrder: 38
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1667393766
 GameObject:
   m_ObjectHideFlags: 0
@@ -3237,36 +3171,6 @@ Transform:
   m_Father: {fileID: 881295568}
   m_RootOrder: 29
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1773875900
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1773875901}
-  m_Layer: 0
-  m_Name: (13, 1)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1773875901
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1773875900}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 13, y: 1, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 881295568}
-  m_RootOrder: 39
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1790263542
 GameObject:
   m_ObjectHideFlags: 0
@@ -3344,67 +3248,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!850595691 &1817763852
-LightingSettings:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: Settings.lighting
-  serializedVersion: 2
-  m_GIWorkflowMode: 0
-  m_EnableBakedLightmaps: 1
-  m_EnableRealtimeLightmaps: 1
-  m_RealtimeEnvironmentLighting: 1
-  m_BounceScale: 1
-  m_AlbedoBoost: 1
-  m_IndirectOutputScale: 1
-  m_UsingShadowmask: 1
-  m_BakeBackend: 1
-  m_LightmapMaxSize: 1024
-  m_BakeResolution: 40
-  m_Padding: 2
-  m_TextureCompression: 1
-  m_AO: 0
-  m_AOMaxDistance: 1
-  m_CompAOExponent: 1
-  m_CompAOExponentDirect: 0
-  m_ExtractAO: 0
-  m_MixedBakeMode: 2
-  m_LightmapsBakeMode: 1
-  m_FilterMode: 1
-  m_LightmapParameters: {fileID: 0}
-  m_ExportTrainingData: 0
-  m_TrainingDataDestination: TrainingData
-  m_RealtimeResolution: 2
-  m_ForceWhiteAlbedo: 0
-  m_ForceUpdates: 0
-  m_FinalGather: 0
-  m_FinalGatherRayCount: 256
-  m_FinalGatherFiltering: 1
-  m_PVRCulling: 1
-  m_PVRSampling: 1
-  m_PVRDirectSampleCount: 32
-  m_PVRSampleCount: 500
-  m_PVREnvironmentSampleCount: 500
-  m_PVREnvironmentReferencePointCount: 2048
-  m_LightProbeSampleCountMultiplier: 4
-  m_PVRBounces: 2
-  m_PVRRussianRouletteStartBounce: 2
-  m_PVREnvironmentMIS: 0
-  m_PVRFilteringMode: 2
-  m_PVRDenoiserTypeDirect: 0
-  m_PVRDenoiserTypeIndirect: 0
-  m_PVRDenoiserTypeAO: 0
-  m_PVRFilterTypeDirect: 0
-  m_PVRFilterTypeIndirect: 0
-  m_PVRFilterTypeAO: 0
-  m_PVRFilteringGaussRadiusDirect: 1
-  m_PVRFilteringGaussRadiusIndirect: 5
-  m_PVRFilteringGaussRadiusAO: 2
-  m_PVRFilteringAtrousPositionSigmaDirect: 0.5
-  m_PVRFilteringAtrousPositionSigmaIndirect: 2
-  m_PVRFilteringAtrousPositionSigmaAO: 1
 --- !u!1 &1871471076
 GameObject:
   m_ObjectHideFlags: 0
@@ -3481,7 +3324,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1890267087}
   m_Layer: 0
-  m_Name: (13, 6)
+  m_Name: (11, 4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3495,7 +3338,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1890267086}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 13, y: 6, z: 0}
+  m_LocalPosition: {x: 11, y: 4, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 881295568}
@@ -3563,8 +3406,9 @@ MonoBehaviour:
   enemyPrefab: {fileID: 3317403196370081403, guid: a95f270a5560abd4eb7dbff8b1979a36,
     type: 3}
   minimumTimebetweenEnemies: 3
-  minimumTimebetweenWaves: 0
   spawnPoint: {fileID: 402141479}
+  decreaseRate: 0.2
+  waitTime: 8
 --- !u!4 &1937360038
 Transform:
   m_ObjectHideFlags: 0
@@ -3636,7 +3480,6 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 0.392}
   m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -3772,7 +3615,6 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
   m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -3841,7 +3683,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 186abc721cde84b4ebad2d8522181ec7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hoverColor: {r: 0.60784316, g: 0.9254902, b: 0.62232375, a: 0.5529412}
+  hoverColor: {r: 0, g: 0, b: 0, a: 0}
   spriteRenderer: {fileID: 0}
   tileCenterPosition: {fileID: 0}
 --- !u!212 &14221887385246490
@@ -3859,7 +3701,6 @@ SpriteRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
-  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -3907,7 +3748,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 186abc721cde84b4ebad2d8522181ec7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hoverColor: {r: 0.60784316, g: 0.9254902, b: 0.62232375, a: 0.5529412}
+  hoverColor: {r: 0, g: 0, b: 0, a: 0}
   spriteRenderer: {fileID: 0}
   tileCenterPosition: {fileID: 0}
 --- !u!212 &59327046666487989
@@ -3925,7 +3766,6 @@ SpriteRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
-  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -3973,7 +3813,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 186abc721cde84b4ebad2d8522181ec7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hoverColor: {r: 0.60784316, g: 0.9254902, b: 0.62232375, a: 0.5529412}
+  hoverColor: {r: 0, g: 0, b: 0, a: 0}
   spriteRenderer: {fileID: 0}
   tileCenterPosition: {fileID: 0}
 --- !u!1 &62617213572902521
@@ -4081,7 +3921,6 @@ SpriteRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
-  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -4157,7 +3996,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 186abc721cde84b4ebad2d8522181ec7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hoverColor: {r: 0.60784316, g: 0.9254902, b: 0.62232375, a: 0.5529412}
+  hoverColor: {r: 0, g: 0, b: 0, a: 0}
   spriteRenderer: {fileID: 0}
   tileCenterPosition: {fileID: 0}
 --- !u!4 &216622107569290979
@@ -4232,7 +4071,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 186abc721cde84b4ebad2d8522181ec7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hoverColor: {r: 0.60784316, g: 0.9254902, b: 0.62232375, a: 0.5529412}
+  hoverColor: {r: 0, g: 0, b: 0, a: 0}
   spriteRenderer: {fileID: 0}
   tileCenterPosition: {fileID: 0}
 --- !u!1 &272129672757211966
@@ -4309,7 +4148,6 @@ SpriteRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
-  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -4360,7 +4198,6 @@ SpriteRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
-  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -4408,7 +4245,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 186abc721cde84b4ebad2d8522181ec7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hoverColor: {r: 0.60784316, g: 0.9254902, b: 0.62232375, a: 0.5529412}
+  hoverColor: {r: 0, g: 0, b: 0, a: 0}
   spriteRenderer: {fileID: 0}
   tileCenterPosition: {fileID: 0}
 --- !u!1 &353994629498149215
@@ -4503,7 +4340,6 @@ SpriteRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
-  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -4565,7 +4401,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 186abc721cde84b4ebad2d8522181ec7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hoverColor: {r: 0.60784316, g: 0.9254902, b: 0.62232375, a: 0.5529412}
+  hoverColor: {r: 0, g: 0, b: 0, a: 0}
   spriteRenderer: {fileID: 0}
   tileCenterPosition: {fileID: 0}
 --- !u!114 &444519866650532531
@@ -4580,7 +4416,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 186abc721cde84b4ebad2d8522181ec7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hoverColor: {r: 0.60784316, g: 0.9254902, b: 0.62232375, a: 0.5529412}
+  hoverColor: {r: 0, g: 0, b: 0, a: 0}
   spriteRenderer: {fileID: 0}
   tileCenterPosition: {fileID: 0}
 --- !u!212 &474445604751821302
@@ -4598,7 +4434,6 @@ SpriteRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
-  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -4784,7 +4619,6 @@ SpriteRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
-  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -4835,7 +4669,6 @@ SpriteRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
-  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -4987,7 +4820,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 186abc721cde84b4ebad2d8522181ec7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hoverColor: {r: 0.60784316, g: 0.9254902, b: 0.62232375, a: 0.5529412}
+  hoverColor: {r: 0, g: 0, b: 0, a: 0}
   spriteRenderer: {fileID: 0}
   tileCenterPosition: {fileID: 0}
 --- !u!212 &647288363162427907
@@ -5005,7 +4838,6 @@ SpriteRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
-  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -5070,7 +4902,6 @@ SpriteRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
-  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -5118,7 +4949,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 186abc721cde84b4ebad2d8522181ec7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hoverColor: {r: 0.60784316, g: 0.9254902, b: 0.62232375, a: 0.5529412}
+  hoverColor: {r: 0, g: 0, b: 0, a: 0}
   spriteRenderer: {fileID: 0}
   tileCenterPosition: {fileID: 0}
 --- !u!4 &727826996506512740
@@ -5192,7 +5023,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 186abc721cde84b4ebad2d8522181ec7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hoverColor: {r: 0.60784316, g: 0.9254902, b: 0.62232375, a: 0.5529412}
+  hoverColor: {r: 0, g: 0, b: 0, a: 0}
   spriteRenderer: {fileID: 0}
   tileCenterPosition: {fileID: 0}
 --- !u!1 &773447326366324290
@@ -5317,7 +5148,6 @@ SpriteRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
-  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -5410,7 +5240,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 186abc721cde84b4ebad2d8522181ec7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hoverColor: {r: 0.60784316, g: 0.9254902, b: 0.62232375, a: 0.5529412}
+  hoverColor: {r: 0, g: 0, b: 0, a: 0}
   spriteRenderer: {fileID: 0}
   tileCenterPosition: {fileID: 0}
 --- !u!1 &920746557863003283
@@ -5470,7 +5300,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 186abc721cde84b4ebad2d8522181ec7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hoverColor: {r: 0.60784316, g: 0.9254902, b: 0.62232375, a: 0.5529412}
+  hoverColor: {r: 0, g: 0, b: 0, a: 0}
   spriteRenderer: {fileID: 0}
   tileCenterPosition: {fileID: 0}
 --- !u!4 &946902683312659443
@@ -5517,7 +5347,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 186abc721cde84b4ebad2d8522181ec7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hoverColor: {r: 0.60784316, g: 0.9254902, b: 0.62232375, a: 0.5529412}
+  hoverColor: {r: 0, g: 0, b: 0, a: 0}
   spriteRenderer: {fileID: 0}
   tileCenterPosition: {fileID: 0}
 --- !u!4 &1001620249229685424
@@ -5608,7 +5438,6 @@ SpriteRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
-  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -5684,7 +5513,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 186abc721cde84b4ebad2d8522181ec7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hoverColor: {r: 0.60784316, g: 0.9254902, b: 0.62232375, a: 0.5529412}
+  hoverColor: {r: 0, g: 0, b: 0, a: 0}
   spriteRenderer: {fileID: 0}
   tileCenterPosition: {fileID: 0}
 --- !u!114 &1099130192381165590
@@ -5699,7 +5528,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 186abc721cde84b4ebad2d8522181ec7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hoverColor: {r: 0.60784316, g: 0.9254902, b: 0.62232375, a: 0.5529412}
+  hoverColor: {r: 0, g: 0, b: 0, a: 0}
   spriteRenderer: {fileID: 0}
   tileCenterPosition: {fileID: 0}
 --- !u!114 &1102917527922117844
@@ -5714,7 +5543,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 186abc721cde84b4ebad2d8522181ec7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hoverColor: {r: 0.60784316, g: 0.9254902, b: 0.62232375, a: 0.5529412}
+  hoverColor: {r: 0, g: 0, b: 0, a: 0}
   spriteRenderer: {fileID: 0}
   tileCenterPosition: {fileID: 0}
 --- !u!1 &1105752720903307670
@@ -5750,7 +5579,6 @@ SpriteRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
-  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -5801,7 +5629,6 @@ SpriteRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
-  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -5849,7 +5676,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 186abc721cde84b4ebad2d8522181ec7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hoverColor: {r: 0.60784316, g: 0.9254902, b: 0.62232375, a: 0.5529412}
+  hoverColor: {r: 0, g: 0, b: 0, a: 0}
   spriteRenderer: {fileID: 0}
   tileCenterPosition: {fileID: 0}
 --- !u!4 &1214258639118613381
@@ -5878,7 +5705,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 186abc721cde84b4ebad2d8522181ec7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hoverColor: {r: 0.60784316, g: 0.9254902, b: 0.62232375, a: 0.5529412}
+  hoverColor: {r: 0, g: 0, b: 0, a: 0}
   spriteRenderer: {fileID: 0}
   tileCenterPosition: {fileID: 0}
 --- !u!1 &1231140840816452118
@@ -5911,7 +5738,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 186abc721cde84b4ebad2d8522181ec7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hoverColor: {r: 0.60784316, g: 0.9254902, b: 0.62232375, a: 0.5529412}
+  hoverColor: {r: 0, g: 0, b: 0, a: 0}
   spriteRenderer: {fileID: 0}
   tileCenterPosition: {fileID: 0}
 --- !u!212 &1264013336622955921
@@ -5929,7 +5756,6 @@ SpriteRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
-  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -5994,7 +5820,6 @@ SpriteRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
-  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -6108,7 +5933,6 @@ SpriteRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
-  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -6156,7 +5980,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 186abc721cde84b4ebad2d8522181ec7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hoverColor: {r: 0.60784316, g: 0.9254902, b: 0.62232375, a: 0.5529412}
+  hoverColor: {r: 0, g: 0, b: 0, a: 0}
   spriteRenderer: {fileID: 0}
   tileCenterPosition: {fileID: 0}
 --- !u!4 &1412830676737278613
@@ -6230,7 +6054,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 186abc721cde84b4ebad2d8522181ec7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hoverColor: {r: 0.60784316, g: 0.9254902, b: 0.62232375, a: 0.5529412}
+  hoverColor: {r: 0, g: 0, b: 0, a: 0}
   spriteRenderer: {fileID: 0}
   tileCenterPosition: {fileID: 0}
 --- !u!114 &1431173084212154591
@@ -6245,7 +6069,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 186abc721cde84b4ebad2d8522181ec7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hoverColor: {r: 0.60784316, g: 0.9254902, b: 0.62232375, a: 0.5529412}
+  hoverColor: {r: 0, g: 0, b: 0, a: 0}
   spriteRenderer: {fileID: 0}
   tileCenterPosition: {fileID: 0}
 --- !u!1 &1442751703984854227
@@ -6281,7 +6105,6 @@ SpriteRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
-  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -6433,7 +6256,6 @@ SpriteRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
-  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -6481,7 +6303,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 186abc721cde84b4ebad2d8522181ec7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hoverColor: {r: 0.60784316, g: 0.9254902, b: 0.62232375, a: 0.5529412}
+  hoverColor: {r: 0, g: 0, b: 0, a: 0}
   spriteRenderer: {fileID: 0}
   tileCenterPosition: {fileID: 0}
 --- !u!4 &1588857538527670938
@@ -6545,7 +6367,6 @@ SpriteRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
-  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -6596,7 +6417,6 @@ SpriteRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
-  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -6661,7 +6481,6 @@ SpriteRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
-  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -6844,7 +6663,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 186abc721cde84b4ebad2d8522181ec7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hoverColor: {r: 0.60784316, g: 0.9254902, b: 0.62232375, a: 0.5529412}
+  hoverColor: {r: 0, g: 0, b: 0, a: 0}
   spriteRenderer: {fileID: 0}
   tileCenterPosition: {fileID: 0}
 --- !u!1 &1877145983525796823
@@ -6985,7 +6804,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 186abc721cde84b4ebad2d8522181ec7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hoverColor: {r: 0.60784316, g: 0.9254902, b: 0.62232375, a: 0.5529412}
+  hoverColor: {r: 0, g: 0, b: 0, a: 0}
   spriteRenderer: {fileID: 0}
   tileCenterPosition: {fileID: 0}
 --- !u!114 &1980688548482313871
@@ -7000,7 +6819,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 186abc721cde84b4ebad2d8522181ec7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hoverColor: {r: 0.60784316, g: 0.9254902, b: 0.62232375, a: 0.5529412}
+  hoverColor: {r: 0, g: 0, b: 0, a: 0}
   spriteRenderer: {fileID: 0}
   tileCenterPosition: {fileID: 0}
 --- !u!4 &1985389225910857710
@@ -7057,7 +6876,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 186abc721cde84b4ebad2d8522181ec7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hoverColor: {r: 0.60784316, g: 0.9254902, b: 0.62232375, a: 0.5529412}
+  hoverColor: {r: 0, g: 0, b: 0, a: 0}
   spriteRenderer: {fileID: 0}
   tileCenterPosition: {fileID: 0}
 --- !u!114 &2068466143381806194
@@ -7072,7 +6891,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 186abc721cde84b4ebad2d8522181ec7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hoverColor: {r: 0.60784316, g: 0.9254902, b: 0.62232375, a: 0.5529412}
+  hoverColor: {r: 0, g: 0, b: 0, a: 0}
   spriteRenderer: {fileID: 0}
   tileCenterPosition: {fileID: 0}
 --- !u!114 &2080097305555346283
@@ -7087,7 +6906,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 186abc721cde84b4ebad2d8522181ec7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hoverColor: {r: 0.60784316, g: 0.9254902, b: 0.62232375, a: 0.5529412}
+  hoverColor: {r: 0, g: 0, b: 0, a: 0}
   spriteRenderer: {fileID: 0}
   tileCenterPosition: {fileID: 0}
 --- !u!4 &2080674853969578610
@@ -7161,7 +6980,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 186abc721cde84b4ebad2d8522181ec7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hoverColor: {r: 0.60784316, g: 0.9254902, b: 0.62232375, a: 0.5529412}
+  hoverColor: {r: 0, g: 0, b: 0, a: 0}
   spriteRenderer: {fileID: 0}
   tileCenterPosition: {fileID: 0}
 --- !u!4 &2166752973821918623
@@ -7193,7 +7012,6 @@ SpriteRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
-  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -7318,7 +7136,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 186abc721cde84b4ebad2d8522181ec7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hoverColor: {r: 0.60784316, g: 0.9254902, b: 0.62232375, a: 0.5529412}
+  hoverColor: {r: 0, g: 0, b: 0, a: 0}
   spriteRenderer: {fileID: 0}
   tileCenterPosition: {fileID: 0}
 --- !u!212 &2331020569956044298
@@ -7336,7 +7154,6 @@ SpriteRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
-  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -7384,7 +7201,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 186abc721cde84b4ebad2d8522181ec7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hoverColor: {r: 0.60784316, g: 0.9254902, b: 0.62232375, a: 0.5529412}
+  hoverColor: {r: 0, g: 0, b: 0, a: 0}
   spriteRenderer: {fileID: 0}
   tileCenterPosition: {fileID: 0}
 --- !u!1 &2387446090541537113
@@ -7444,7 +7261,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 186abc721cde84b4ebad2d8522181ec7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hoverColor: {r: 0.60784316, g: 0.9254902, b: 0.62232375, a: 0.5529412}
+  hoverColor: {r: 0, g: 0, b: 0, a: 0}
   spriteRenderer: {fileID: 0}
   tileCenterPosition: {fileID: 0}
 --- !u!114 &2434840591027699573
@@ -7459,7 +7276,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 186abc721cde84b4ebad2d8522181ec7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hoverColor: {r: 0.60784316, g: 0.9254902, b: 0.62232375, a: 0.5529412}
+  hoverColor: {r: 0, g: 0, b: 0, a: 0}
   spriteRenderer: {fileID: 0}
   tileCenterPosition: {fileID: 0}
 --- !u!4 &2449816041202098892
@@ -7491,7 +7308,6 @@ SpriteRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
-  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -7539,7 +7355,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 186abc721cde84b4ebad2d8522181ec7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hoverColor: {r: 0.60784316, g: 0.9254902, b: 0.62232375, a: 0.5529412}
+  hoverColor: {r: 0, g: 0, b: 0, a: 0}
   spriteRenderer: {fileID: 0}
   tileCenterPosition: {fileID: 0}
 --- !u!114 &2486124835431882759
@@ -7554,7 +7370,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 186abc721cde84b4ebad2d8522181ec7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hoverColor: {r: 0.60784316, g: 0.9254902, b: 0.62232375, a: 0.5529412}
+  hoverColor: {r: 0, g: 0, b: 0, a: 0}
   spriteRenderer: {fileID: 0}
   tileCenterPosition: {fileID: 0}
 --- !u!4 &2486604051475022743
@@ -7586,7 +7402,6 @@ SpriteRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
-  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -7637,7 +7452,6 @@ SpriteRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
-  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -7733,7 +7547,6 @@ SpriteRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
-  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -7784,7 +7597,6 @@ SpriteRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
-  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -7832,7 +7644,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 186abc721cde84b4ebad2d8522181ec7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hoverColor: {r: 0.60784316, g: 0.9254902, b: 0.62232375, a: 0.5529412}
+  hoverColor: {r: 0, g: 0, b: 0, a: 0}
   spriteRenderer: {fileID: 0}
   tileCenterPosition: {fileID: 0}
 --- !u!114 &2693116296956364667
@@ -7847,7 +7659,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 186abc721cde84b4ebad2d8522181ec7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hoverColor: {r: 0.60784316, g: 0.9254902, b: 0.62232375, a: 0.5529412}
+  hoverColor: {r: 0, g: 0, b: 0, a: 0}
   spriteRenderer: {fileID: 0}
   tileCenterPosition: {fileID: 0}
 --- !u!4 &2710732562758761162
@@ -7907,7 +7719,6 @@ SpriteRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
-  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -8073,7 +7884,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 186abc721cde84b4ebad2d8522181ec7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hoverColor: {r: 0.60784316, g: 0.9254902, b: 0.62232375, a: 0.5529412}
+  hoverColor: {r: 0, g: 0, b: 0, a: 0}
   spriteRenderer: {fileID: 0}
   tileCenterPosition: {fileID: 0}
 --- !u!212 &2820089482795460961
@@ -8091,7 +7902,6 @@ SpriteRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
-  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -8153,7 +7963,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 186abc721cde84b4ebad2d8522181ec7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hoverColor: {r: 0.60784316, g: 0.9254902, b: 0.62232375, a: 0.5529412}
+  hoverColor: {r: 0, g: 0, b: 0, a: 0}
   spriteRenderer: {fileID: 0}
   tileCenterPosition: {fileID: 0}
 --- !u!4 &2874550745649853429
@@ -8199,7 +8009,6 @@ SpriteRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
-  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -8323,7 +8132,6 @@ SpriteRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
-  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -8371,7 +8179,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 186abc721cde84b4ebad2d8522181ec7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hoverColor: {r: 0.60784316, g: 0.9254902, b: 0.62232375, a: 0.5529412}
+  hoverColor: {r: 0, g: 0, b: 0, a: 0}
   spriteRenderer: {fileID: 0}
   tileCenterPosition: {fileID: 0}
 --- !u!4 &2950219863928655016
@@ -8403,7 +8211,6 @@ SpriteRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
-  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -8499,7 +8306,6 @@ SpriteRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
-  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -8547,7 +8353,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 186abc721cde84b4ebad2d8522181ec7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hoverColor: {r: 0.60784316, g: 0.9254902, b: 0.62232375, a: 0.5529412}
+  hoverColor: {r: 0, g: 0, b: 0, a: 0}
   spriteRenderer: {fileID: 0}
   tileCenterPosition: {fileID: 0}
 --- !u!212 &3067488236392329919
@@ -8565,7 +8371,6 @@ SpriteRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
-  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -8672,7 +8477,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 186abc721cde84b4ebad2d8522181ec7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hoverColor: {r: 0.60784316, g: 0.9254902, b: 0.62232375, a: 0.5529412}
+  hoverColor: {r: 0, g: 0, b: 0, a: 0}
   spriteRenderer: {fileID: 0}
   tileCenterPosition: {fileID: 0}
 --- !u!4 &3193796715127567569
@@ -8704,7 +8509,6 @@ SpriteRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
-  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -8873,7 +8677,6 @@ SpriteRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
-  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -8935,7 +8738,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 186abc721cde84b4ebad2d8522181ec7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hoverColor: {r: 0.60784316, g: 0.9254902, b: 0.62232375, a: 0.5529412}
+  hoverColor: {r: 0, g: 0, b: 0, a: 0}
   spriteRenderer: {fileID: 0}
   tileCenterPosition: {fileID: 0}
 --- !u!1 &3357300624029049945
@@ -8971,7 +8774,6 @@ SpriteRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
-  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -9145,7 +8947,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 186abc721cde84b4ebad2d8522181ec7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hoverColor: {r: 0.60784316, g: 0.9254902, b: 0.62232375, a: 0.5529412}
+  hoverColor: {r: 0, g: 0, b: 0, a: 0}
   spriteRenderer: {fileID: 0}
   tileCenterPosition: {fileID: 0}
 --- !u!4 &3527125624753158342
@@ -9174,7 +8976,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 186abc721cde84b4ebad2d8522181ec7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hoverColor: {r: 0.60784316, g: 0.9254902, b: 0.62232375, a: 0.5529412}
+  hoverColor: {r: 0, g: 0, b: 0, a: 0}
   spriteRenderer: {fileID: 0}
   tileCenterPosition: {fileID: 0}
 --- !u!114 &3586595459427668240
@@ -9189,7 +8991,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 186abc721cde84b4ebad2d8522181ec7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hoverColor: {r: 0.60784316, g: 0.9254902, b: 0.62232375, a: 0.5529412}
+  hoverColor: {r: 0, g: 0, b: 0, a: 0}
   spriteRenderer: {fileID: 0}
   tileCenterPosition: {fileID: 0}
 --- !u!1 &3587699204905248311
@@ -9250,7 +9052,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 186abc721cde84b4ebad2d8522181ec7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hoverColor: {r: 0.60784316, g: 0.9254902, b: 0.62232375, a: 0.5529412}
+  hoverColor: {r: 0, g: 0, b: 0, a: 0}
   spriteRenderer: {fileID: 0}
   tileCenterPosition: {fileID: 0}
 --- !u!212 &3642480186315602100
@@ -9268,7 +9070,6 @@ SpriteRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
-  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -9375,7 +9176,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 186abc721cde84b4ebad2d8522181ec7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hoverColor: {r: 0.60784316, g: 0.9254902, b: 0.62232375, a: 0.5529412}
+  hoverColor: {r: 0, g: 0, b: 0, a: 0}
   spriteRenderer: {fileID: 0}
   tileCenterPosition: {fileID: 0}
 --- !u!1 &3720369789938785754
@@ -9453,7 +9254,6 @@ SpriteRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
-  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -9581,7 +9381,6 @@ SpriteRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
-  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -9691,7 +9490,6 @@ SpriteRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
-  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -9785,7 +9583,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 186abc721cde84b4ebad2d8522181ec7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hoverColor: {r: 0.60784316, g: 0.9254902, b: 0.62232375, a: 0.5529412}
+  hoverColor: {r: 0, g: 0, b: 0, a: 0}
   spriteRenderer: {fileID: 0}
   tileCenterPosition: {fileID: 0}
 --- !u!114 &3959680887102098934
@@ -9800,7 +9598,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 186abc721cde84b4ebad2d8522181ec7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hoverColor: {r: 0.60784316, g: 0.9254902, b: 0.62232375, a: 0.5529412}
+  hoverColor: {r: 0, g: 0, b: 0, a: 0}
   spriteRenderer: {fileID: 0}
   tileCenterPosition: {fileID: 0}
 --- !u!212 &4010581427907654237
@@ -9818,7 +9616,6 @@ SpriteRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
-  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -9866,7 +9663,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 186abc721cde84b4ebad2d8522181ec7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hoverColor: {r: 0.60784316, g: 0.9254902, b: 0.62232375, a: 0.5529412}
+  hoverColor: {r: 0, g: 0, b: 0, a: 0}
   spriteRenderer: {fileID: 0}
   tileCenterPosition: {fileID: 0}
 --- !u!4 &4022451774529125008
@@ -9895,7 +9692,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 186abc721cde84b4ebad2d8522181ec7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hoverColor: {r: 0.60784316, g: 0.9254902, b: 0.62232375, a: 0.5529412}
+  hoverColor: {r: 0, g: 0, b: 0, a: 0}
   spriteRenderer: {fileID: 0}
   tileCenterPosition: {fileID: 0}
 --- !u!114 &4056232275337977759
@@ -9910,7 +9707,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 186abc721cde84b4ebad2d8522181ec7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hoverColor: {r: 0.60784316, g: 0.9254902, b: 0.62232375, a: 0.5529412}
+  hoverColor: {r: 0, g: 0, b: 0, a: 0}
   spriteRenderer: {fileID: 0}
   tileCenterPosition: {fileID: 0}
 --- !u!1 &4077019855006841234
@@ -9970,7 +9767,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 186abc721cde84b4ebad2d8522181ec7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hoverColor: {r: 0.60784316, g: 0.9254902, b: 0.62232375, a: 0.5529412}
+  hoverColor: {r: 0, g: 0, b: 0, a: 0}
   spriteRenderer: {fileID: 0}
   tileCenterPosition: {fileID: 0}
 --- !u!212 &4082940340974314041
@@ -9988,7 +9785,6 @@ SpriteRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
-  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -10126,7 +9922,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 186abc721cde84b4ebad2d8522181ec7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hoverColor: {r: 0.60784316, g: 0.9254902, b: 0.62232375, a: 0.5529412}
+  hoverColor: {r: 0, g: 0, b: 0, a: 0}
   spriteRenderer: {fileID: 0}
   tileCenterPosition: {fileID: 0}
 --- !u!1 &4123796727329323961
@@ -10159,7 +9955,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 186abc721cde84b4ebad2d8522181ec7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hoverColor: {r: 0.60784316, g: 0.9254902, b: 0.62232375, a: 0.5529412}
+  hoverColor: {r: 0, g: 0, b: 0, a: 0}
   spriteRenderer: {fileID: 0}
   tileCenterPosition: {fileID: 0}
 --- !u!4 &4144580574658380490
@@ -10188,7 +9984,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 186abc721cde84b4ebad2d8522181ec7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hoverColor: {r: 0.60784316, g: 0.9254902, b: 0.62232375, a: 0.5529412}
+  hoverColor: {r: 0, g: 0, b: 0, a: 0}
   spriteRenderer: {fileID: 0}
   tileCenterPosition: {fileID: 0}
 --- !u!212 &4214054631064300813
@@ -10206,7 +10002,6 @@ SpriteRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
-  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -10302,7 +10097,6 @@ SpriteRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
-  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -10367,7 +10161,6 @@ SpriteRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
-  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -10415,7 +10208,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 186abc721cde84b4ebad2d8522181ec7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hoverColor: {r: 0.60784316, g: 0.9254902, b: 0.62232375, a: 0.5529412}
+  hoverColor: {r: 0, g: 0, b: 0, a: 0}
   spriteRenderer: {fileID: 0}
   tileCenterPosition: {fileID: 0}
 --- !u!1 &4298437400677086182
@@ -10579,7 +10372,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 186abc721cde84b4ebad2d8522181ec7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hoverColor: {r: 0.60784316, g: 0.9254902, b: 0.62232375, a: 0.5529412}
+  hoverColor: {r: 0, g: 0, b: 0, a: 0}
   spriteRenderer: {fileID: 0}
   tileCenterPosition: {fileID: 0}
 --- !u!212 &4462108765946937507
@@ -10597,7 +10390,6 @@ SpriteRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
-  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -10648,7 +10440,6 @@ SpriteRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
-  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -10717,7 +10508,6 @@ SpriteRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
-  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -10768,7 +10558,6 @@ SpriteRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
-  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -10816,7 +10605,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 186abc721cde84b4ebad2d8522181ec7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hoverColor: {r: 0.60784316, g: 0.9254902, b: 0.62232375, a: 0.5529412}
+  hoverColor: {r: 0, g: 0, b: 0, a: 0}
   spriteRenderer: {fileID: 0}
   tileCenterPosition: {fileID: 0}
 --- !u!4 &4563963901196677133
@@ -10845,7 +10634,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 186abc721cde84b4ebad2d8522181ec7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hoverColor: {r: 0.60784316, g: 0.9254902, b: 0.62232375, a: 0.5529412}
+  hoverColor: {r: 0, g: 0, b: 0, a: 0}
   spriteRenderer: {fileID: 0}
   tileCenterPosition: {fileID: 0}
 --- !u!114 &4591834095192036906
@@ -10860,7 +10649,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 186abc721cde84b4ebad2d8522181ec7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hoverColor: {r: 0.60784316, g: 0.9254902, b: 0.62232375, a: 0.5529412}
+  hoverColor: {r: 0, g: 0, b: 0, a: 0}
   spriteRenderer: {fileID: 0}
   tileCenterPosition: {fileID: 0}
 --- !u!212 &4599006211779784262
@@ -10878,7 +10667,6 @@ SpriteRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
-  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -10926,7 +10714,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 186abc721cde84b4ebad2d8522181ec7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hoverColor: {r: 0.60784316, g: 0.9254902, b: 0.62232375, a: 0.5529412}
+  hoverColor: {r: 0, g: 0, b: 0, a: 0}
   spriteRenderer: {fileID: 0}
   tileCenterPosition: {fileID: 0}
 --- !u!212 &4658745565290397931
@@ -10944,7 +10732,6 @@ SpriteRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
-  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -11054,7 +10841,6 @@ SpriteRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
-  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -11116,7 +10902,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 186abc721cde84b4ebad2d8522181ec7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hoverColor: {r: 0.60784316, g: 0.9254902, b: 0.62232375, a: 0.5529412}
+  hoverColor: {r: 0, g: 0, b: 0, a: 0}
   spriteRenderer: {fileID: 0}
   tileCenterPosition: {fileID: 0}
 --- !u!212 &4727019928095553295
@@ -11134,7 +10920,6 @@ SpriteRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
-  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -11182,7 +10967,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 186abc721cde84b4ebad2d8522181ec7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hoverColor: {r: 0.60784316, g: 0.9254902, b: 0.62232375, a: 0.5529412}
+  hoverColor: {r: 0, g: 0, b: 0, a: 0}
   spriteRenderer: {fileID: 0}
   tileCenterPosition: {fileID: 0}
 --- !u!1 &4744592019912229271
@@ -11287,7 +11072,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 186abc721cde84b4ebad2d8522181ec7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hoverColor: {r: 0.60784316, g: 0.9254902, b: 0.62232375, a: 0.5529412}
+  hoverColor: {r: 0, g: 0, b: 0, a: 0}
   spriteRenderer: {fileID: 0}
   tileCenterPosition: {fileID: 0}
 --- !u!4 &4752858799453189906
@@ -11316,7 +11101,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 186abc721cde84b4ebad2d8522181ec7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hoverColor: {r: 0.60784316, g: 0.9254902, b: 0.62232375, a: 0.5529412}
+  hoverColor: {r: 0, g: 0, b: 0, a: 0}
   spriteRenderer: {fileID: 0}
   tileCenterPosition: {fileID: 0}
 --- !u!212 &4782457545617736430
@@ -11334,7 +11119,6 @@ SpriteRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
-  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -11385,7 +11169,6 @@ SpriteRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
-  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -11492,7 +11275,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 186abc721cde84b4ebad2d8522181ec7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hoverColor: {r: 0.60784316, g: 0.9254902, b: 0.62232375, a: 0.5529412}
+  hoverColor: {r: 0, g: 0, b: 0, a: 0}
   spriteRenderer: {fileID: 0}
   tileCenterPosition: {fileID: 0}
 --- !u!1 &4833865535278888601
@@ -11573,7 +11356,6 @@ SpriteRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
-  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -11624,7 +11406,6 @@ SpriteRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
-  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -11731,7 +11512,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 186abc721cde84b4ebad2d8522181ec7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hoverColor: {r: 0.60784316, g: 0.9254902, b: 0.62232375, a: 0.5529412}
+  hoverColor: {r: 0, g: 0, b: 0, a: 0}
   spriteRenderer: {fileID: 0}
   tileCenterPosition: {fileID: 0}
 --- !u!1 &4903476769597090190
@@ -11826,7 +11607,6 @@ SpriteRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
-  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -11891,7 +11671,6 @@ SpriteRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
-  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -11942,7 +11721,6 @@ SpriteRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
-  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -12094,7 +11872,6 @@ SpriteRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
-  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -12173,7 +11950,6 @@ SpriteRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
-  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -12269,7 +12045,6 @@ SpriteRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
-  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -12381,7 +12156,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 186abc721cde84b4ebad2d8522181ec7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hoverColor: {r: 0.60784316, g: 0.9254902, b: 0.62232375, a: 0.5529412}
+  hoverColor: {r: 0, g: 0, b: 0, a: 0}
   spriteRenderer: {fileID: 0}
   tileCenterPosition: {fileID: 0}
 --- !u!1 &5472325242217098920
@@ -12441,7 +12216,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 186abc721cde84b4ebad2d8522181ec7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hoverColor: {r: 0.60784316, g: 0.9254902, b: 0.62232375, a: 0.5529412}
+  hoverColor: {r: 0, g: 0, b: 0, a: 0}
   spriteRenderer: {fileID: 0}
   tileCenterPosition: {fileID: 0}
 --- !u!114 &5509928071959093059
@@ -12456,7 +12231,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 186abc721cde84b4ebad2d8522181ec7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hoverColor: {r: 0.60784316, g: 0.9254902, b: 0.62232375, a: 0.5529412}
+  hoverColor: {r: 0, g: 0, b: 0, a: 0}
   spriteRenderer: {fileID: 0}
   tileCenterPosition: {fileID: 0}
 --- !u!114 &5553069095434311365
@@ -12471,7 +12246,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 186abc721cde84b4ebad2d8522181ec7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hoverColor: {r: 0.60784316, g: 0.9254902, b: 0.62232375, a: 0.5529412}
+  hoverColor: {r: 0, g: 0, b: 0, a: 0}
   spriteRenderer: {fileID: 0}
   tileCenterPosition: {fileID: 0}
 --- !u!212 &5558923421511621950
@@ -12489,7 +12264,6 @@ SpriteRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
-  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -12663,7 +12437,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 186abc721cde84b4ebad2d8522181ec7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hoverColor: {r: 0.60784316, g: 0.9254902, b: 0.62232375, a: 0.5529412}
+  hoverColor: {r: 0, g: 0, b: 0, a: 0}
   spriteRenderer: {fileID: 0}
   tileCenterPosition: {fileID: 0}
 --- !u!4 &5612222308778974609
@@ -12737,7 +12511,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 186abc721cde84b4ebad2d8522181ec7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hoverColor: {r: 0.60784316, g: 0.9254902, b: 0.62232375, a: 0.5529412}
+  hoverColor: {r: 0, g: 0, b: 0, a: 0}
   spriteRenderer: {fileID: 0}
   tileCenterPosition: {fileID: 0}
 --- !u!1 &5688073959032053380
@@ -12770,7 +12544,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 186abc721cde84b4ebad2d8522181ec7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hoverColor: {r: 0.60784316, g: 0.9254902, b: 0.62232375, a: 0.5529412}
+  hoverColor: {r: 0, g: 0, b: 0, a: 0}
   spriteRenderer: {fileID: 0}
   tileCenterPosition: {fileID: 0}
 --- !u!212 &5720577165339218259
@@ -12788,7 +12562,6 @@ SpriteRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
-  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -12884,7 +12657,6 @@ SpriteRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
-  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -12932,7 +12704,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 186abc721cde84b4ebad2d8522181ec7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hoverColor: {r: 0.60784316, g: 0.9254902, b: 0.62232375, a: 0.5529412}
+  hoverColor: {r: 0, g: 0, b: 0, a: 0}
   spriteRenderer: {fileID: 0}
   tileCenterPosition: {fileID: 0}
 --- !u!212 &5759525096667275923
@@ -12950,7 +12722,6 @@ SpriteRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
-  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -12998,7 +12769,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 186abc721cde84b4ebad2d8522181ec7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hoverColor: {r: 0.60784316, g: 0.9254902, b: 0.62232375, a: 0.5529412}
+  hoverColor: {r: 0, g: 0, b: 0, a: 0}
   spriteRenderer: {fileID: 0}
   tileCenterPosition: {fileID: 0}
 --- !u!1 &5844168072931215017
@@ -13103,7 +12874,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 186abc721cde84b4ebad2d8522181ec7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hoverColor: {r: 0.60784316, g: 0.9254902, b: 0.62232375, a: 0.5529412}
+  hoverColor: {r: 0, g: 0, b: 0, a: 0}
   spriteRenderer: {fileID: 0}
   tileCenterPosition: {fileID: 0}
 --- !u!114 &5911650556014282816
@@ -13118,7 +12889,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 186abc721cde84b4ebad2d8522181ec7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hoverColor: {r: 0.60784316, g: 0.9254902, b: 0.62232375, a: 0.5529412}
+  hoverColor: {r: 0, g: 0, b: 0, a: 0}
   spriteRenderer: {fileID: 0}
   tileCenterPosition: {fileID: 0}
 --- !u!4 &5939849669020484639
@@ -13192,7 +12963,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 186abc721cde84b4ebad2d8522181ec7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hoverColor: {r: 0.60784316, g: 0.9254902, b: 0.62232375, a: 0.5529412}
+  hoverColor: {r: 0, g: 0, b: 0, a: 0}
   spriteRenderer: {fileID: 0}
   tileCenterPosition: {fileID: 0}
 --- !u!114 &5969685424160440881
@@ -13207,7 +12978,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 186abc721cde84b4ebad2d8522181ec7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hoverColor: {r: 0.60784316, g: 0.9254902, b: 0.62232375, a: 0.5529412}
+  hoverColor: {r: 0, g: 0, b: 0, a: 0}
   spriteRenderer: {fileID: 0}
   tileCenterPosition: {fileID: 0}
 --- !u!114 &5971832652843055670
@@ -13222,7 +12993,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 186abc721cde84b4ebad2d8522181ec7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hoverColor: {r: 0.60784316, g: 0.9254902, b: 0.62232375, a: 0.5529412}
+  hoverColor: {r: 0, g: 0, b: 0, a: 0}
   spriteRenderer: {fileID: 0}
   tileCenterPosition: {fileID: 0}
 --- !u!1 &5980475939783707506
@@ -13282,7 +13053,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 186abc721cde84b4ebad2d8522181ec7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hoverColor: {r: 0.60784316, g: 0.9254902, b: 0.62232375, a: 0.5529412}
+  hoverColor: {r: 0, g: 0, b: 0, a: 0}
   spriteRenderer: {fileID: 0}
   tileCenterPosition: {fileID: 0}
 --- !u!212 &5994031515192517098
@@ -13300,7 +13071,6 @@ SpriteRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
-  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -13407,7 +13177,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 186abc721cde84b4ebad2d8522181ec7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hoverColor: {r: 0.60784316, g: 0.9254902, b: 0.62232375, a: 0.5529412}
+  hoverColor: {r: 0, g: 0, b: 0, a: 0}
   spriteRenderer: {fileID: 0}
   tileCenterPosition: {fileID: 0}
 --- !u!4 &6059043650770127059
@@ -13439,7 +13209,6 @@ SpriteRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
-  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -13490,7 +13259,6 @@ SpriteRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
-  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -13541,7 +13309,6 @@ SpriteRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
-  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -13589,7 +13356,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 186abc721cde84b4ebad2d8522181ec7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hoverColor: {r: 0.60784316, g: 0.9254902, b: 0.62232375, a: 0.5529412}
+  hoverColor: {r: 0, g: 0, b: 0, a: 0}
   spriteRenderer: {fileID: 0}
   tileCenterPosition: {fileID: 0}
 --- !u!114 &6141227809509019648
@@ -13604,7 +13371,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 186abc721cde84b4ebad2d8522181ec7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hoverColor: {r: 0.60784316, g: 0.9254902, b: 0.62232375, a: 0.5529412}
+  hoverColor: {r: 0, g: 0, b: 0, a: 0}
   spriteRenderer: {fileID: 0}
   tileCenterPosition: {fileID: 0}
 --- !u!114 &6157678714442236213
@@ -13619,7 +13386,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 186abc721cde84b4ebad2d8522181ec7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hoverColor: {r: 0.60784316, g: 0.9254902, b: 0.62232375, a: 0.5529412}
+  hoverColor: {r: 0, g: 0, b: 0, a: 0}
   spriteRenderer: {fileID: 0}
   tileCenterPosition: {fileID: 0}
 --- !u!212 &6173537858076861000
@@ -13637,7 +13404,6 @@ SpriteRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
-  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -13688,7 +13454,6 @@ SpriteRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
-  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -13792,7 +13557,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 186abc721cde84b4ebad2d8522181ec7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hoverColor: {r: 0.60784316, g: 0.9254902, b: 0.62232375, a: 0.5529412}
+  hoverColor: {r: 0, g: 0, b: 0, a: 0}
   spriteRenderer: {fileID: 0}
   tileCenterPosition: {fileID: 0}
 --- !u!4 &6300342642291002871
@@ -13824,7 +13589,6 @@ SpriteRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
-  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -13875,7 +13639,6 @@ SpriteRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
-  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -13955,7 +13718,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 186abc721cde84b4ebad2d8522181ec7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hoverColor: {r: 0.60784316, g: 0.9254902, b: 0.62232375, a: 0.5529412}
+  hoverColor: {r: 0, g: 0, b: 0, a: 0}
   spriteRenderer: {fileID: 0}
   tileCenterPosition: {fileID: 0}
 --- !u!1 &6443595916562860399
@@ -14019,7 +13782,6 @@ SpriteRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
-  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -14067,7 +13829,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 186abc721cde84b4ebad2d8522181ec7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hoverColor: {r: 0.60784316, g: 0.9254902, b: 0.62232375, a: 0.5529412}
+  hoverColor: {r: 0, g: 0, b: 0, a: 0}
   spriteRenderer: {fileID: 0}
   tileCenterPosition: {fileID: 0}
 --- !u!1 &6560734561447255621
@@ -14130,7 +13892,6 @@ SpriteRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
-  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -14209,7 +13970,6 @@ SpriteRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
-  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -14257,7 +14017,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 186abc721cde84b4ebad2d8522181ec7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hoverColor: {r: 0.60784316, g: 0.9254902, b: 0.62232375, a: 0.5529412}
+  hoverColor: {r: 0, g: 0, b: 0, a: 0}
   spriteRenderer: {fileID: 0}
   tileCenterPosition: {fileID: 0}
 --- !u!1 &6595883815875528217
@@ -14338,7 +14098,6 @@ SpriteRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
-  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -14400,7 +14159,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 186abc721cde84b4ebad2d8522181ec7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hoverColor: {r: 0.60784316, g: 0.9254902, b: 0.62232375, a: 0.5529412}
+  hoverColor: {r: 0, g: 0, b: 0, a: 0}
   spriteRenderer: {fileID: 0}
   tileCenterPosition: {fileID: 0}
 --- !u!212 &6663076267228523865
@@ -14418,7 +14177,6 @@ SpriteRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
-  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -14646,7 +14404,6 @@ SpriteRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
-  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -14697,7 +14454,6 @@ SpriteRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
-  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -14745,7 +14501,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 186abc721cde84b4ebad2d8522181ec7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hoverColor: {r: 0.60784316, g: 0.9254902, b: 0.62232375, a: 0.5529412}
+  hoverColor: {r: 0, g: 0, b: 0, a: 0}
   spriteRenderer: {fileID: 0}
   tileCenterPosition: {fileID: 0}
 --- !u!212 &6834109175889301355
@@ -14763,7 +14519,6 @@ SpriteRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
-  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -14828,7 +14583,6 @@ SpriteRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
-  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -14879,7 +14633,6 @@ SpriteRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
-  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -14944,7 +14697,6 @@ SpriteRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
-  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -14992,7 +14744,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 186abc721cde84b4ebad2d8522181ec7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hoverColor: {r: 0.60784316, g: 0.9254902, b: 0.62232375, a: 0.5529412}
+  hoverColor: {r: 0, g: 0, b: 0, a: 0}
   spriteRenderer: {fileID: 0}
   tileCenterPosition: {fileID: 0}
 --- !u!212 &7101345672926158168
@@ -15010,7 +14762,6 @@ SpriteRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
-  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -15058,7 +14809,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 186abc721cde84b4ebad2d8522181ec7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hoverColor: {r: 0.60784316, g: 0.9254902, b: 0.62232375, a: 0.5529412}
+  hoverColor: {r: 0, g: 0, b: 0, a: 0}
   spriteRenderer: {fileID: 0}
   tileCenterPosition: {fileID: 0}
 --- !u!4 &7137743492933118816
@@ -15090,7 +14841,6 @@ SpriteRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
-  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -15141,7 +14891,6 @@ SpriteRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
-  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -15237,7 +14986,6 @@ SpriteRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
-  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -15392,7 +15140,6 @@ SpriteRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
-  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -15443,7 +15190,6 @@ SpriteRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
-  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -15491,7 +15237,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 186abc721cde84b4ebad2d8522181ec7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hoverColor: {r: 0.60784316, g: 0.9254902, b: 0.62232375, a: 0.5529412}
+  hoverColor: {r: 0, g: 0, b: 0, a: 0}
   spriteRenderer: {fileID: 0}
   tileCenterPosition: {fileID: 0}
 --- !u!1 &7268318909157890400
@@ -15554,7 +15300,6 @@ SpriteRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
-  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -15602,7 +15347,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 186abc721cde84b4ebad2d8522181ec7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hoverColor: {r: 0.60784316, g: 0.9254902, b: 0.62232375, a: 0.5529412}
+  hoverColor: {r: 0, g: 0, b: 0, a: 0}
   spriteRenderer: {fileID: 0}
   tileCenterPosition: {fileID: 0}
 --- !u!114 &7373919623962793620
@@ -15617,7 +15362,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 186abc721cde84b4ebad2d8522181ec7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hoverColor: {r: 0.60784316, g: 0.9254902, b: 0.62232375, a: 0.5529412}
+  hoverColor: {r: 0, g: 0, b: 0, a: 0}
   spriteRenderer: {fileID: 0}
   tileCenterPosition: {fileID: 0}
 --- !u!4 &7405900863401180740
@@ -15649,7 +15394,6 @@ SpriteRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
-  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -15714,7 +15458,6 @@ SpriteRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
-  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -15762,7 +15505,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 186abc721cde84b4ebad2d8522181ec7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hoverColor: {r: 0.60784316, g: 0.9254902, b: 0.62232375, a: 0.5529412}
+  hoverColor: {r: 0, g: 0, b: 0, a: 0}
   spriteRenderer: {fileID: 0}
   tileCenterPosition: {fileID: 0}
 --- !u!212 &7453306310773216331
@@ -15780,7 +15523,6 @@ SpriteRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
-  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -15908,7 +15650,6 @@ SpriteRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
-  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -16033,7 +15774,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 186abc721cde84b4ebad2d8522181ec7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hoverColor: {r: 0.60784316, g: 0.9254902, b: 0.62232375, a: 0.5529412}
+  hoverColor: {r: 0, g: 0, b: 0, a: 0}
   spriteRenderer: {fileID: 0}
   tileCenterPosition: {fileID: 0}
 --- !u!4 &7596815773877444805
@@ -16065,7 +15806,6 @@ SpriteRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
-  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -16175,7 +15915,6 @@ SpriteRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
-  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -16226,7 +15965,6 @@ SpriteRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
-  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -16305,7 +16043,6 @@ SpriteRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
-  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -16460,7 +16197,6 @@ SpriteRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
-  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -16508,7 +16244,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 186abc721cde84b4ebad2d8522181ec7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hoverColor: {r: 0.60784316, g: 0.9254902, b: 0.62232375, a: 0.5529412}
+  hoverColor: {r: 0, g: 0, b: 0, a: 0}
   spriteRenderer: {fileID: 0}
   tileCenterPosition: {fileID: 0}
 --- !u!114 &7914161654288433118
@@ -16523,7 +16259,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 186abc721cde84b4ebad2d8522181ec7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hoverColor: {r: 0.60784316, g: 0.9254902, b: 0.62232375, a: 0.5529412}
+  hoverColor: {r: 0, g: 0, b: 0, a: 0}
   spriteRenderer: {fileID: 0}
   tileCenterPosition: {fileID: 0}
 --- !u!4 &7944657934028279638
@@ -16660,7 +16396,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 186abc721cde84b4ebad2d8522181ec7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hoverColor: {r: 0.60784316, g: 0.9254902, b: 0.62232375, a: 0.5529412}
+  hoverColor: {r: 0, g: 0, b: 0, a: 0}
   spriteRenderer: {fileID: 0}
   tileCenterPosition: {fileID: 0}
 --- !u!212 &8039935672003629466
@@ -16678,7 +16414,6 @@ SpriteRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
-  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -16743,7 +16478,6 @@ SpriteRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
-  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -16791,7 +16525,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 186abc721cde84b4ebad2d8522181ec7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hoverColor: {r: 0.60784316, g: 0.9254902, b: 0.62232375, a: 0.5529412}
+  hoverColor: {r: 0, g: 0, b: 0, a: 0}
   spriteRenderer: {fileID: 0}
   tileCenterPosition: {fileID: 0}
 --- !u!114 &8128195024791860589
@@ -16806,7 +16540,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 186abc721cde84b4ebad2d8522181ec7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hoverColor: {r: 0.60784316, g: 0.9254902, b: 0.62232375, a: 0.5529412}
+  hoverColor: {r: 0, g: 0, b: 0, a: 0}
   spriteRenderer: {fileID: 0}
   tileCenterPosition: {fileID: 0}
 --- !u!114 &8174952113310629942
@@ -16821,7 +16555,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 186abc721cde84b4ebad2d8522181ec7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hoverColor: {r: 0.60784316, g: 0.9254902, b: 0.62232375, a: 0.5529412}
+  hoverColor: {r: 0, g: 0, b: 0, a: 0}
   spriteRenderer: {fileID: 0}
   tileCenterPosition: {fileID: 0}
 --- !u!114 &8191399743088674045
@@ -16836,7 +16570,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 186abc721cde84b4ebad2d8522181ec7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hoverColor: {r: 0.60784316, g: 0.9254902, b: 0.62232375, a: 0.5529412}
+  hoverColor: {r: 0, g: 0, b: 0, a: 0}
   spriteRenderer: {fileID: 0}
   tileCenterPosition: {fileID: 0}
 --- !u!1 &8196471701139048210
@@ -16869,7 +16603,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 186abc721cde84b4ebad2d8522181ec7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hoverColor: {r: 0.60784316, g: 0.9254902, b: 0.62232375, a: 0.5529412}
+  hoverColor: {r: 0, g: 0, b: 0, a: 0}
   spriteRenderer: {fileID: 0}
   tileCenterPosition: {fileID: 0}
 --- !u!212 &8207583795551695648
@@ -16887,7 +16621,6 @@ SpriteRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
-  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -16938,7 +16671,6 @@ SpriteRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
-  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -16989,7 +16721,6 @@ SpriteRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
-  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -17040,7 +16771,6 @@ SpriteRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
-  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -17088,7 +16818,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 186abc721cde84b4ebad2d8522181ec7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hoverColor: {r: 0.60784316, g: 0.9254902, b: 0.62232375, a: 0.5529412}
+  hoverColor: {r: 0, g: 0, b: 0, a: 0}
   spriteRenderer: {fileID: 0}
   tileCenterPosition: {fileID: 0}
 --- !u!4 &8401317029055871696
@@ -17120,7 +16850,6 @@ SpriteRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
-  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -17168,7 +16897,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 186abc721cde84b4ebad2d8522181ec7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hoverColor: {r: 0.60784316, g: 0.9254902, b: 0.62232375, a: 0.5529412}
+  hoverColor: {r: 0, g: 0, b: 0, a: 0}
   spriteRenderer: {fileID: 0}
   tileCenterPosition: {fileID: 0}
 --- !u!212 &8424116603989774132
@@ -17186,7 +16915,6 @@ SpriteRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
-  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -17318,7 +17046,6 @@ SpriteRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
-  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -17411,7 +17138,6 @@ SpriteRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
-  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -17462,7 +17188,6 @@ SpriteRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
-  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -17513,7 +17238,6 @@ SpriteRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
-  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -17564,7 +17288,6 @@ SpriteRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
-  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -17615,7 +17338,6 @@ SpriteRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
-  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -17677,7 +17399,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 186abc721cde84b4ebad2d8522181ec7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hoverColor: {r: 0.60784316, g: 0.9254902, b: 0.62232375, a: 0.5529412}
+  hoverColor: {r: 0, g: 0, b: 0, a: 0}
   spriteRenderer: {fileID: 0}
   tileCenterPosition: {fileID: 0}
 --- !u!1 &8649288294441478935
@@ -17740,7 +17462,6 @@ SpriteRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
-  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -17791,7 +17512,6 @@ SpriteRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
-  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -17839,7 +17559,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 186abc721cde84b4ebad2d8522181ec7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hoverColor: {r: 0.60784316, g: 0.9254902, b: 0.62232375, a: 0.5529412}
+  hoverColor: {r: 0, g: 0, b: 0, a: 0}
   spriteRenderer: {fileID: 0}
   tileCenterPosition: {fileID: 0}
 --- !u!1 &8723526121382608243
@@ -17916,7 +17636,6 @@ SpriteRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
-  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -17964,7 +17683,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 186abc721cde84b4ebad2d8522181ec7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hoverColor: {r: 0.60784316, g: 0.9254902, b: 0.62232375, a: 0.5529412}
+  hoverColor: {r: 0, g: 0, b: 0, a: 0}
   spriteRenderer: {fileID: 0}
   tileCenterPosition: {fileID: 0}
 --- !u!1 &8797485205999689627
@@ -18027,7 +17746,6 @@ SpriteRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
-  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -18078,7 +17796,6 @@ SpriteRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
-  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -18126,7 +17843,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 186abc721cde84b4ebad2d8522181ec7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hoverColor: {r: 0.60784316, g: 0.9254902, b: 0.62232375, a: 0.5529412}
+  hoverColor: {r: 0, g: 0, b: 0, a: 0}
   spriteRenderer: {fileID: 0}
   tileCenterPosition: {fileID: 0}
 --- !u!114 &8822534214571011670
@@ -18141,7 +17858,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 186abc721cde84b4ebad2d8522181ec7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hoverColor: {r: 0.60784316, g: 0.9254902, b: 0.62232375, a: 0.5529412}
+  hoverColor: {r: 0, g: 0, b: 0, a: 0}
   spriteRenderer: {fileID: 0}
   tileCenterPosition: {fileID: 0}
 --- !u!1 &8833413312662183318
@@ -18218,7 +17935,6 @@ SpriteRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
-  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -18266,7 +17982,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 186abc721cde84b4ebad2d8522181ec7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hoverColor: {r: 0.60784316, g: 0.9254902, b: 0.62232375, a: 0.5529412}
+  hoverColor: {r: 0, g: 0, b: 0, a: 0}
   spriteRenderer: {fileID: 0}
   tileCenterPosition: {fileID: 0}
 --- !u!114 &8949935977264341608
@@ -18281,7 +17997,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 186abc721cde84b4ebad2d8522181ec7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hoverColor: {r: 0.60784316, g: 0.9254902, b: 0.62232375, a: 0.5529412}
+  hoverColor: {r: 0, g: 0, b: 0, a: 0}
   spriteRenderer: {fileID: 0}
   tileCenterPosition: {fileID: 0}
 --- !u!114 &8999475608182964586
@@ -18296,7 +18012,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 186abc721cde84b4ebad2d8522181ec7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hoverColor: {r: 0.60784316, g: 0.9254902, b: 0.62232375, a: 0.5529412}
+  hoverColor: {r: 0, g: 0, b: 0, a: 0}
   spriteRenderer: {fileID: 0}
   tileCenterPosition: {fileID: 0}
 --- !u!4 &9008521331331011862
@@ -18370,7 +18086,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 186abc721cde84b4ebad2d8522181ec7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hoverColor: {r: 0.60784316, g: 0.9254902, b: 0.62232375, a: 0.5529412}
+  hoverColor: {r: 0, g: 0, b: 0, a: 0}
   spriteRenderer: {fileID: 0}
   tileCenterPosition: {fileID: 0}
 --- !u!4 &9075923305421543245
@@ -18413,7 +18129,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 186abc721cde84b4ebad2d8522181ec7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hoverColor: {r: 0.60784316, g: 0.9254902, b: 0.62232375, a: 0.5529412}
+  hoverColor: {r: 0, g: 0, b: 0, a: 0}
   spriteRenderer: {fileID: 0}
   tileCenterPosition: {fileID: 0}
 --- !u!4 &9124910643519483295
@@ -18442,7 +18158,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 186abc721cde84b4ebad2d8522181ec7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hoverColor: {r: 0.60784316, g: 0.9254902, b: 0.62232375, a: 0.5529412}
+  hoverColor: {r: 0, g: 0, b: 0, a: 0}
   spriteRenderer: {fileID: 0}
   tileCenterPosition: {fileID: 0}
 --- !u!1 &9129091325201253516
@@ -18547,7 +18263,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 186abc721cde84b4ebad2d8522181ec7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hoverColor: {r: 0.60784316, g: 0.9254902, b: 0.62232375, a: 0.5529412}
+  hoverColor: {r: 0, g: 0, b: 0, a: 0}
   spriteRenderer: {fileID: 0}
   tileCenterPosition: {fileID: 0}
 --- !u!1 &9133777729615674349
@@ -18652,7 +18368,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 186abc721cde84b4ebad2d8522181ec7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hoverColor: {r: 0.60784316, g: 0.9254902, b: 0.62232375, a: 0.5529412}
+  hoverColor: {r: 0, g: 0, b: 0, a: 0}
   spriteRenderer: {fileID: 0}
   tileCenterPosition: {fileID: 0}
 --- !u!1 &9213644791039848243

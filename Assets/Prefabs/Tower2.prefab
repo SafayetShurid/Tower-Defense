@@ -48,7 +48,6 @@ SpriteRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
-  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -100,10 +99,10 @@ MonoBehaviour:
   currentEnemyTarget: {fileID: 0}
   bulletSound: {fileID: -7000021654818635801}
   range: 4
-  fireRate: 4
+  fireRate: 2.5
   bulletPrefab: {fileID: 5669196214266821438, guid: 59def54d57217194dbbd3b85e00f5bf9,
     type: 3}
-  towerPrice: 35
+  towerPrice: 70
 --- !u!82 &-7000021654818635801
 AudioSource:
   m_ObjectHideFlags: 0
