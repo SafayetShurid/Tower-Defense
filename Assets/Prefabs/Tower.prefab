@@ -100,10 +100,10 @@ MonoBehaviour:
   currentEnemyTarget: {fileID: 0}
   bulletSound: {fileID: -2187470026601523370}
   range: 3
-  fireRate: 2
+  fireRate: 1
   bulletPrefab: {fileID: 5669196214266821438, guid: 2b533be02a761664aa7bf4079fec7874,
     type: 3}
-  towerPrice: 15
+  towerPrice: 25
 --- !u!82 &-2187470026601523370
 AudioSource:
   m_ObjectHideFlags: 0
@@ -111,7 +111,7 @@ AudioSource:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1970546238987197013}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 9ee8c2edb9caf6549aa5c52d8d35bbb9, type: 3}

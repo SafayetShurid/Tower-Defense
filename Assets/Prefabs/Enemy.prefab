@@ -48,6 +48,7 @@ SpriteRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -95,9 +96,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3462708372a33d046b1115f2f7d09527, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 0.5
+  speed: 0.8
   health: 100
-  cashReward: 5
+  cashReward: 2
   healthBarSprites:
   - {fileID: -3294913871482814643, guid: a504057e4eb541442ae1e999b162ce14, type: 3}
   - {fileID: -3294913871482814643, guid: a504057e4eb541442ae1e999b162ce14, type: 3}
@@ -157,6 +158,7 @@ SpriteRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:

@@ -48,6 +48,7 @@ SpriteRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -95,9 +96,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cc9d726f44f070e409da9cb77d2a06d4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enmeyObjects: []
-  currentEnemyTarget: {fileID: 0}
-  bulletSound: {fileID: -7000021654818635801}
+  towerType: 1
   range: 4
   fireRate: 2.5
   bulletPrefab: {fileID: 5669196214266821438, guid: 59def54d57217194dbbd3b85e00f5bf9,
@@ -110,7 +109,7 @@ AudioSource:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1970546238987197013}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 9ee8c2edb9caf6549aa5c52d8d35bbb9, type: 3}
