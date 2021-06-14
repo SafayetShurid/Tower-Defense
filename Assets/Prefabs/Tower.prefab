@@ -96,14 +96,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cc9d726f44f070e409da9cb77d2a06d4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enmeyObjects: []
-  currentEnemyTarget: {fileID: 0}
-  bulletSound: {fileID: -2187470026601523370}
+  towerType: 0
   range: 3
   fireRate: 1
   bulletPrefab: {fileID: 5669196214266821438, guid: 2b533be02a761664aa7bf4079fec7874,
     type: 3}
-  towerPrice: 25
+  towerPrice: 20
 --- !u!82 &-2187470026601523370
 AudioSource:
   m_ObjectHideFlags: 0

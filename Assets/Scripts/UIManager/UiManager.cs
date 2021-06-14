@@ -39,7 +39,8 @@ public class UiManager : MonoBehaviour
     void Update()
     {
         scoreText.text = GameManager.instance.gameScore.ToString();
-        cashText.text = GameManager.instance.cash.ToString() + "$";     
+        cashText.text = GameManager.instance.cash.ToString() + "$";   
+        
       
     }
     

@@ -98,10 +98,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   towerType: 1
   range: 4
-  fireRate: 2.5
+  fireRate: 1
   bulletPrefab: {fileID: 5669196214266821438, guid: 59def54d57217194dbbd3b85e00f5bf9,
     type: 3}
-  towerPrice: 70
+  towerPrice: 50
 --- !u!82 &-7000021654818635801
 AudioSource:
   m_ObjectHideFlags: 0

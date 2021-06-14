@@ -40,6 +40,7 @@ public class SpawnManager : MonoBehaviour
     private void IncreaseSpawnRate()
     {
         minimumTimebetweenEnemies -= decreaseRate;
+        minimumTimebetweenEnemies = Mathf.Clamp(minimumTimebetweenEnemies, 0.5f, 3.5f);
     }
 
     void SpawnEnemy()

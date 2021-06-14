@@ -523,10 +523,100 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 125331528960053957, guid: 90d2c7459e07acf4fb24327a6a7b70de,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 583730254952509854, guid: 90d2c7459e07acf4fb24327a6a7b70de,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 636280045313196519, guid: 90d2c7459e07acf4fb24327a6a7b70de,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1005308080566818453, guid: 90d2c7459e07acf4fb24327a6a7b70de,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1643816032367071550, guid: 90d2c7459e07acf4fb24327a6a7b70de,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2078770791266632087, guid: 90d2c7459e07acf4fb24327a6a7b70de,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2391442684587904602, guid: 90d2c7459e07acf4fb24327a6a7b70de,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2495527504424296334, guid: 90d2c7459e07acf4fb24327a6a7b70de,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2765511712447410368, guid: 90d2c7459e07acf4fb24327a6a7b70de,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2807692405195712622, guid: 90d2c7459e07acf4fb24327a6a7b70de,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2870653434767046791, guid: 90d2c7459e07acf4fb24327a6a7b70de,
         type: 3}
       propertyPath: m_Name
       value: NewMap
+      objectReference: {fileID: 0}
+    - target: {fileID: 3029320753849874492, guid: 90d2c7459e07acf4fb24327a6a7b70de,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3458272012772340071, guid: 90d2c7459e07acf4fb24327a6a7b70de,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3736886768981627726, guid: 90d2c7459e07acf4fb24327a6a7b70de,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4164698679333143430, guid: 90d2c7459e07acf4fb24327a6a7b70de,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4453080381087849502, guid: 90d2c7459e07acf4fb24327a6a7b70de,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4521149441287579237, guid: 90d2c7459e07acf4fb24327a6a7b70de,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4528367057890581409, guid: 90d2c7459e07acf4fb24327a6a7b70de,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4660042319965762501, guid: 90d2c7459e07acf4fb24327a6a7b70de,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4809224229209574329, guid: 90d2c7459e07acf4fb24327a6a7b70de,
         type: 3}
@@ -581,6 +671,56 @@ PrefabInstance:
     - target: {fileID: 4809224229209574329, guid: 90d2c7459e07acf4fb24327a6a7b70de,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5096483735617288921, guid: 90d2c7459e07acf4fb24327a6a7b70de,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5338262946513059915, guid: 90d2c7459e07acf4fb24327a6a7b70de,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6593586947358226128, guid: 90d2c7459e07acf4fb24327a6a7b70de,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6923912598905789864, guid: 90d2c7459e07acf4fb24327a6a7b70de,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7167194021768039925, guid: 90d2c7459e07acf4fb24327a6a7b70de,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7264651690462583147, guid: 90d2c7459e07acf4fb24327a6a7b70de,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7765028165652885523, guid: 90d2c7459e07acf4fb24327a6a7b70de,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7800963622601807255, guid: 90d2c7459e07acf4fb24327a6a7b70de,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8502102965829445837, guid: 90d2c7459e07acf4fb24327a6a7b70de,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8842684668574760773, guid: 90d2c7459e07acf4fb24327a6a7b70de,
+        type: 3}
+      propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -835,11 +975,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyPrefab: {fileID: 3317403196370081403, guid: a95f270a5560abd4eb7dbff8b1979a36,
     type: 3}
-  minimumTimebetweenEnemies: 3
+  minimumTimebetweenEnemies: 3.5
   spawnPoint: {fileID: 170683898}
   enemyLimit: 50
-  decreaseRate: 0.2
-  waitTime: 10
+  decreaseRate: 0.07
+  waitTime: 3
 --- !u!1 &661107784
 GameObject:
   m_ObjectHideFlags: 0
@@ -886,7 +1026,7 @@ MonoBehaviour:
   tilePrefab: {fileID: 8181038115511262773, guid: e5ce5a9072e6c1748bdf301d28b20c68,
     type: 3}
   gameScore: 0
-  cash: 50
+  cash: 40
   cashAmountToAdd: 2
   cashIncreaseSecond: 2
 --- !u!1 &811780356
